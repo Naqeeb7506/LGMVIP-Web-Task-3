@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg1: #00cec9;
+  --main: #a3eded;
+  --border: #039e9c;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+  font-family: "Raleway", sans-serif;
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--main);
+}
+
+.main nav {
+  width: 100%;
+  background: var(--bg1);
+  padding: 20px 0;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  word-spacing: 10px;
+  letter-spacing: 5px;
+}
+
+/* form style start */
+.box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box .left_box {
+  margin-top: 20px;
+  width: 50%;
+  padding: 30px;
+  border-right: 2px solid var(--bg1);
+}
+
+.box .left_box form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.box .left_box form .inputs {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.box .left_box form .inputs input {
+  font-size: 18px;
+  padding: 10px;
+  width: 80%;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.box .left_box form .inputs input:focus-visible {
+  border: 1px solid #74b9ff;
+  outline: 1px solid #74b9ff;
+}
+
+.box .left_box form .gender #female,
+.box .left_box form #css,
+.box .left_box form #js {
+  margin-left: 10px;
+}
+
+.mar1 {
+  margin-left: 20px;
+}
+
+.mar2 {
+  margin-left: 23px;
+}
+
+.mar3 {
+  margin-left: 5px;
+}
+
+.mar4 {
+  margin-left: -14px;
+}
+
+.box .left_box form .gender .gen {
+  padding-right: 60px;
+}
+
+.box .left_box form .skill {
+  padding-right: 80px;
+}
+
+.btns {
+  margin-top: 10px;
+  display: flex;
+  gap: 15px;
+}
+.btns .submit_btn,
+.btns .cancel_btn {
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: blue;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+.btns .cancel_btn {
+  background: red;
+  color: white;
+}
+/* form style end */
+
+/* right box start */
+.box .right_box {
+  width: 50%;
+  padding: 30px;
+}
+.box .right_box .title {
+  text-align: center;
+}
+.right_box .heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+table {
+  width: 100%;
+  margin-top: 30px;
+}
+
+table p {
+  font-size: 50px;
+}
+
+table thead {
+  background: var(--bg1);
+  border-collapse: collapse;
+}
+table thead th {
+  padding: 10px 0;
+  font-size: 20px;
+}
+table,
+th,
+td {
+  border: 2px solid var(--border);
+  border-collapse: collapse;
+}
+
+table tbody td {
+  padding: 10px;
+}
+
+table tbody td p {
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+table tbody td .img_box {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+table tbody td .img_box img {
+  width: 100%;
+  height: 100%;
+}
+
+table tbody td .img_box .cancel {
+  position: absolute;
+  right: -25px;
+  cursor: pointer;
+  font-size: 22px;
+  display: none;
+  transition: all 0.5s linear;
+}
+table tbody td:hover .cancel {
+  display: block;
+}
+/* right box end */

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Enrollment Form</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="graduated.png" type="image/x-icon" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <nav>
+        <h1>Student Enrollment Form</h1>
+      </nav>
+      <div class="box">
+        <!--  -->
+        <div class="left_box">
+          <form onsubmit="enroll(event)">
+            <div class="inputs">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                name="name"
+                required
+                id="name"
+                placeholder="Enter Your Name"
+                class="mar1"
+              />
+            </div>
+            <div class="inputs">
+              <label for="email">Email</label>
+              <input
+                required
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter Your Email"
+                class="mar2"
+              />
+            </div>
+            <div class="inputs">
+              <label for="website">Website</label>
+              <input
+                required
+                type="url"
+                name="website"
+                id="website"
+                placeholder="Enter Your Website Link"
+                class="mar3"
+              />
+            </div>
+            <div class="inputs">
+              <label for="image">Image Link</label>
+              <input
+                required
+                type="url"
+                name="image"
+                placeholder="Enter Your Image Link"
+                id="image"
+                class="mar4"
+              />
+            </div>
+            <div class="gender">
+              <label for="gender" class="gen">Gender</label>
+              <input
+                type="radio"
+                required
+                name="gender"
+                id="male"
+                class="genderlist"
+                value="Male"
+              />
+              <label for="male">Male</label>
+              <input
+                type="radio"
+                name="gender"
+                required
+                id="female"
+                class="genderlist"
+                value="Female"
+              />
+              <label for="female">Female</label>
+            </div>
+            <div class="skills">
+              <label for="skills" class="skill">Skills</label>
+              <input
+                type="checkbox"
+                class="skillslist"
+                name="checkbox"
+                id="html"
+                value="html"
+              />
+              <label for="html">HTML</label>
+              <input
+                type="checkbox"
+                class="skillslist"
+                name="checkbox"
+                id="css"
+                value="css"
+              />
+              <label for="css">CSS</label>
+              <input
+                type="checkbox"
+                class="skillslist"
+                name="checkbox"
+                id="js"
+                value="javascript"
+              />
+              <label for="js">JavaScript</label>
+            </div>
+            <div class="btns">
+              <button type="submit" class="submit_btn" id="submit">
+                Enroll Student
+              </button>
+              <button class="cancel_btn" id="cancel">Cancel</button>
+            </div>
+          </form>
+        </div>
+
+        <!--  -->
+        <div class="right_box">
+          <div class="title">
+            <h1>Enrolled Students</h1>
+          </div>
+
+          <!--  -->
+          <table id="student_table">
+            <p style="margin-top: 20px; font-size: 20px" id="detail">
+              *Fill the form to Enroll the Students
+            </p>
+            <thead>
+              <tr>
+                <th style="width: 60%">Description</th>
+                <th>Image</th>
+              </tr>
+            </thead>
+            <tbody id="tablebody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- JS -->
+    <script src="app.js"></script>
+  </body>
+</html>
